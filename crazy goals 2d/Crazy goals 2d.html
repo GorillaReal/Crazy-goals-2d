@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Crazy Goals 2D</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Press Start 2P', cursive;
+      background: linear-gradient(270deg, #ff00cc, #3333ff, #00ffcc, #ff6600);
+      background-size: 800% 800%;
+      animation: gradientMove 12s ease infinite;
+      color: white;
+      overflow: hidden;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    #menu {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 32px;
+      text-shadow: 0 0 15px #fff;
+      margin-bottom: 50px;
+    }
+
+    button {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 14px;
+      padding: 20px 40px;
+      border: none;
+      border-radius: 12px;
+      background: #00ffcc;
+      color: black;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 20px #00ffcc;
+    }
+
+    button:hover {
+      transform: scale(1.15);
+      background: #00ccaa;
+      box-shadow: 0 0 30px #00ffcc;
+    }
+
+    #aboutLink {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 12px;
+      color: white;
+      text-decoration: none;
+    }
+
+    #aboutLink:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+<a id="aboutLink" href="about.html">About Me</a>
+
+<div id="menu">
+  <h1>⚽ CRAZY GOALS 2D ⚽</h1>
+
+  <!-- 🔥 THIS is the important fix -->
+  <button onclick="startGame()">START GAME</button>
+</div>
+
+<script>
+function startGame() {
+  window.location.href = "game.html"; 
+}
+</script>
+
+</body>
+</html>
